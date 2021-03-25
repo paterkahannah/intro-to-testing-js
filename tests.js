@@ -82,3 +82,42 @@ describe('isEven', function () {
         expect(isEven()).toBe(false);
     });
 });
+
+describe('isVowel', function () {
+    it('should be a defined function', function() {
+        expect(typeof isVowel).toBe('function');
+    });
+    it('should return true if vowel', function () {
+        expect(isVowel('e')).toBe(true);
+    });
+    it('should return true if capitalized vowel', function () {
+        expect(isVowel('A')).toBe(true);
+    });
+    it('should return false is a number is passed', function () {
+        expect(isVowel(4)).toBe(false);
+    });
+    it('should return false if "banana" passed', function () {
+       expect(isVowel('banana')).toBe(false);
+    });
+    it('should expect no valuse passed to be false', function () {
+        expect(isVowel()).toBe(false);
+    });
+    it('should expect boolean values to be false', function () {
+        expect(isVowel(true)).toBe(false);
+    });
+});
+
+describe('add', function () {
+    it('should be a defined function', function () {
+        expect(typeof add).toBe('function');
+    });
+    it('should add to passed number values together', function () {
+        expect(add(-3, -9)).toBe(-12);
+    });
+    it('should should add string number value', function () {
+        expect(add('2', '3')).toBe(5);
+    });
+    // it('should return NaN for non number string values', function () {
+    //     expect(add('silly', 'me')).toBe(NaN);
+    // });
+});

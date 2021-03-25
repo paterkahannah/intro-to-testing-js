@@ -19,7 +19,17 @@ function isEven(x) {
     return parseInt(x) % 2 === 0;
 }
 
-console.log(isEven('banana'));
+function isVowel(x) {
+    return x === 'a' || x === 'e' || x === 'i' || x === 'o' || x === 'u' || x === 'A' || x === 'E' || x === 'I' || x === 'O' || x === 'U';
+}
+
+function add (x, y) {
+    return parseInt(x) + parseInt(y);
+}
+
+
+
+
 
 
 // function sayHello(x) {
