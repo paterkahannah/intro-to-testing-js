@@ -11,6 +11,10 @@ function sayHello(x) {
     }
 }
 
+function isFive(x) {
+    return parseInt(x) === 5;
+}
+
 // function sayHello(x) {
 //     if (x === undefined) {
 //         return 'Hello, World!';
