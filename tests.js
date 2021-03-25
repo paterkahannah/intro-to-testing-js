@@ -52,3 +52,33 @@ describe('isFive', function () {
         expect(isFive('5')).toBe(true);
     });
 });
+
+describe('isEven', function () {
+    it('should be a defined function', function () {
+        expect(typeof isEven).toBe('function');
+    });
+    it('should return true if input is an even number', function () {
+        expect(isEven(2)).toBe(true);
+    });
+    it('should should return true is input is -4', function () {
+        expect(isEven(-4)).toBe(true);
+    });
+    it('should expect return false if input is 3', function () {
+        expect(isEven(3)).toBe(false);
+    });
+    it('should expect non-number strings to return false', function () {
+        expect(isEven('banana')).toBe(false);
+    });
+    it('should expect number as a string to be true', function () {
+        expect(isEven('8')).toBe(true);
+    });
+    // it('should expect infinity to return false', function () {
+    //     expect(isEven(infinity)).toBe(false);
+    // });
+    it('should return false if boolean false passed', function () {
+      expect(isEven(false)).toBe(false);
+    });
+    it('should return false if no input', function () {
+        expect(isEven()).toBe(false);
+    });
+});

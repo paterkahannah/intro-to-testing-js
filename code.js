@@ -15,6 +15,13 @@ function isFive(x) {
     return parseInt(x) === 5;
 }
 
+function isEven(x) {
+    return parseInt(x) % 2 === 0;
+}
+
+console.log(isEven('banana'));
+
+
 // function sayHello(x) {
 //     if (x === undefined) {
 //         return 'Hello, World!';
