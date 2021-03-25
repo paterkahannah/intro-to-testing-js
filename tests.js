@@ -19,3 +19,10 @@ describe('sayHello', function() {
         expect(typeof sayHello).toBe('function');
     });
 });
+
+describe('sayHello', function () {
+    it('should give us a string when called', function () {
+        expect(typeof sayHello()).toBe('string')
+
+    });
+});
