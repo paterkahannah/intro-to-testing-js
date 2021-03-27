@@ -1,4 +1,3 @@
-// Unit tests for the helloWorld function
 describe('helloWorld', function() {
     it('should be a defined function', function() {
       expect(typeof helloWorld).toBe('function');
@@ -18,19 +17,19 @@ describe('sayHello', function() {
     it('should be a defined function', function() {
         expect(typeof sayHello).toBe('function');
     });
-    it('should give us a string when called', function() {
+    it('should return a string when called', function() {
         expect(typeof sayHello()).toBe('string');
     });
-    it('should say "Hello, Jane!"', function () {
+    it('should return the string "Hello, Jane!" when passed "Jane"', function () {
         expect(sayHello('Jane')).toBe('Hello, Jane!');
     });
-    it('should say "Hello, Alex!"', function () {
+    it('should return the string "Hello, Alex!" when passed "Alex"', function () {
         expect(sayHello('Alex')).toBe('Hello, Alex!');
     });
-    it('should say "Hello, Pat!"', function () {
+    it('should return the string "Hello, Pat!" when passed "pat"', function () {
         expect(sayHello('Pat')).toBe('Hello, Pat!');
     });
-    it('should say "Hello, World!', function () {
+    it('should say "Hello, World!" if no value passed', function () {
         expect(sayHello()).toBe("Hello, World!");
     });
     it('should say "Hello, World!" if true passed' , function () {
@@ -39,6 +38,22 @@ describe('sayHello', function() {
     it('should say "Hello, World!" if false passed' , function () {
         expect(sayHello(false)).toBe("Hello, World!")
     });
+    it('should say "Hello, World!" if empty string passed' , function () {
+        expect(sayHello("")).toBe("Hello, World!")
+    });
+    it('should say "Hello, 2.3!" if 2.3 passed' , function () {
+        expect(sayHello(2.3)).toBe("Hello, 2.3!")
+    });
+    it('should say "Hello, 2.3!" if "2.3" passed' , function () {
+        expect(sayHello('2.3')).toBe("Hello, 2.3!")
+    });
+    it('should say false if [1] passed' , function () {
+        expect(sayHello([1])).toBe("Hello, World!")
+    });
+    // pass function with or without ()?
+    // it('should say false if helloWorld() function passed' , function () {
+    //     expect(sayHello(helloWorld ())).toBe("Hello, World!")
+    // });
 });
 
 describe('isFive', function () {
@@ -48,7 +63,7 @@ describe('isFive', function () {
     it('should return true if 5 is passed', function () {
         expect(isFive(5)).toBe(true);
     });
-    it('should return true if string "5" is passed', function () {
+    it('should return true if "5" is passed', function () {
         expect(isFive('5')).toBe(true);
     });
 });
@@ -72,9 +87,9 @@ describe('isEven', function () {
     it('should expect number as a string to be true', function () {
         expect(isEven('8')).toBe(true);
     });
-    // it('should expect infinity to return false', function () {
-    //     expect(isEven(infinity)).toBe(false);
-    // });
+    it('should expect infinity to return false', function () {
+        expect(isEven(Infinity)).toBe(false);
+    });
     it('should return false if boolean false passed', function () {
       expect(isEven(false)).toBe(false);
     });
@@ -117,7 +132,4 @@ describe('add', function () {
     it('should should add string number value', function () {
         expect(add('2', '3')).toBe(5);
     });
-    // it('should return NaN for non number string values', function () {
-    //     expect(add('silly', 'me')).toBe(NaN);
-    // });
 });
