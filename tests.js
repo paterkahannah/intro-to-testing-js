@@ -50,10 +50,9 @@ describe('sayHello', function() {
     it('should say false if [1] passed' , function () {
         expect(sayHello([1])).toBe("Hello, World!")
     });
-    // pass function with or without ()?
-    // it('should say false if helloWorld() function passed' , function () {
-    //     expect(sayHello(helloWorld ())).toBe("Hello, World!")
-    // });
+    it('should say false if function passed' , function () {
+        expect(sayHello(helloWorld)).toBe("Hello, World!")
+    });
 });
 
 describe('isFive', function () {
