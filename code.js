@@ -1,6 +1,6 @@
 "use strict";
 // below code (which is a function declaration) can be swapped with function expression (block below which is not commented out), they both work but can be used in different ways
-// function helloWorld() {
+//pwd function helloWorld() {
 //     return "Hello, World!";
 // }
 
@@ -16,9 +16,9 @@ function sayHello(x) {
     }
 }
 
-// // why doesn't this code work?
+// why doesn't this code work?
 // function sayHello(x) {
-//     (typeof x === 'string') ? "Hello, " + x + "!" : 'Hello, World!';
+//     (typeof x === 'string' && x.trim().length > 0) || typeof x === 'number' ? "Hello, " + x + "!" : 'Hello, World!';
 // }
 
 function isFive(x) {
@@ -30,7 +30,7 @@ function isEven(x) {
 }
 
 function isVowel(x) {
-    return x === 'a' || x === 'e' || x === 'i' || x === 'o' || x === 'u' || x === 'A' || x === 'E' || x === 'I' || x === 'O' || x === 'U';
+    return (/^[aeiou]$/i).test(x);
 }
 
 function add (x, y) {
