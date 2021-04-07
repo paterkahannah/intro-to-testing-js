@@ -9,10 +9,10 @@ var helloWorld = function() {
 }
 
 function sayHello(x) {
-     if ((typeof x === 'string' && x.trim().length > 0) || typeof x === 'number' ) {
+    if ((typeof x === 'string' && x.trim().length > 0) || typeof x === 'number' ) {
         return "Hello, " + x + "!";
     }
-        return 'Hello, World!';
+    return 'Hello, World!';
 }
 
 function isFive(x) {

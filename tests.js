@@ -30,7 +30,7 @@ describe('sayHello', function() {
         expect(sayHello('Pat')).toBe('Hello, Pat!');
     });
     it('should say "Hello, World!" if no value passed', function () {
-        expect(sayHello()).toBe("Hello, World!");
+        expect(sayHello(null)).toBe("Hello, World!");
     });
     it('should say "Hello, World!" if true passed' , function () {
         expect(sayHello(true)).toBe("Hello, World!");
@@ -53,6 +53,9 @@ describe('sayHello', function() {
     it('should say false if function passed' , function () {
         expect(sayHello(helloWorld)).toBe("Hello, World!")
     });
+    // it('should say false if function passed' , function () {
+    //     expect(sayHello(null)).toBe("Hello, World!")
+    // });
 });
 
 describe('isFive', function () {
